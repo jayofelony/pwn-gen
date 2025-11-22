@@ -8,6 +8,7 @@ After=pwngrid-peer.service
 Type=simple
 WorkingDirectory=~
 ExecStart=/usr/bin/pwnagotchi-launcher
+ExecStopPost=bash -c "if egrep -iq 'clearonshutdown.*=.*true' /etc/pwnagotchi/config.toml; then pwnagotchi --clear; fi"
 Restart=always
 RestartSec=30
 TasksMax=infinity
