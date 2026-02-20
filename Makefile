@@ -15,19 +15,13 @@ IMAGE_DIR ?= $(BUILD_HOME)/images
 
 # clone pi-gen into pi-gen-32bit folder
 32bit:
-	sed -i "s|WORK_DIR=.*|WORK_DIR=\"$(BUILD_HOME)/work-32bit\"|" config-32bit
-	sed -i "s|DEPLOY_DIR=.*|DEPLOY_DIR=\"$(IMAGE_DIR)\"|" config-32bit
 	sudo ./pi-gen-32bit/build.sh -c config-32bit
-	mkdir -p $(IMAGE_DIR)
-	chown $(BUILD_USER):$(BUILD_USER) -R $(IMAGE_DIR)
+	sudo chown $(BUILD_USER):$(BUILD_USER) -R $(IMAGE_DIR)
 
 # clone pi-gen arm64 branch into pi-gen-64bit folder
 64bit:
-	sed -i "s|WORK_DIR=.*|WORK_DIR=\"$(BUILD_HOME)/work-64bit\"|" config-64bit
-	sed -i "s|DEPLOY_DIR=.*|DEPLOY_DIR=\"$(IMAGE_DIR)\"|" config-64bit
 	sudo ./pi-gen-64bit/build.sh -c config-64bit
-	mkdir -p $(IMAGE_DIR)
-	chown $(BUILD_USER):$(BUILD_USER) -R $(IMAGE_DIR)
+	sudo chown $(BUILD_USER):$(BUILD_USER) -R $(IMAGE_DIR)
 
 update_langs:
 	@for lang in stage3/05-install-pwnagotchi/files/pwnagotchi/pwnagotchi/locale/*/; do\
