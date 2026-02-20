@@ -1,0 +1,12 @@
+# IDE directories
+.idea/
+.vscode/
+
+# Build outputs
+*.img
+*.img.xz
+*.zip
+
+# Python
+__pycache__/
+*.pyc
