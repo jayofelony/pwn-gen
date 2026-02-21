@@ -1,7 +1,7 @@
 VERSION=$(grep -oP "(?<=')[0-9.]+(?=')" ~/Pwny-rework/pwnagotchi/pwnagotchi/_version.py)
 IMG_NAME="pwnagotchi-32bit-${VERSION}"
-WORK_DIR="/home/wpa2/work-32bit"
-DEPLOY_DIR="/home/wpa2/images"
+WORK_DIR="${HOME}/work-32bit"
+DEPLOY_DIR="${HOME}/images"
 DEPLOY_COMPRESSION="xz"
 TARGET_HOSTNAME="pwnagotchi"
 KEYBOARD_KEYMAP="us"
