@@ -1,0 +1,10 @@
+# PwnStore - Community Plugin Manager
+# Installed by pwn-gen at build time.
+# Access the web UI at: http://<device-ip>:8080/plugins/pwnstore_ui/
+#
+# To use a custom/private plugin registry, uncomment and edit:
+# [main.plugins.pwnstore_ui]
+# store_url = "https://raw.githubusercontent.com/YOUR_NAME/pwnagotchi-store/main/plugins.json"
+
+[main.plugins.pwnstore_ui]
+enabled = true
