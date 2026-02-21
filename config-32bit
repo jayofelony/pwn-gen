@@ -1,5 +1,4 @@
-VERSION=$(grep -oP "(?<=')[0-9.]+(?=')" ~/Pwny-rework/pwnagotchi/pwnagotchi/_version.py)
-IMG_NAME="pwnagotchi-32bit-2.9.5.4"
+IMG_NAME="pwnagotchi-32bit"
 WORK_DIR="${HOME}/work-32bit"
 DEPLOY_DIR="${HOME}/images"
 DEPLOY_COMPRESSION="xz"
