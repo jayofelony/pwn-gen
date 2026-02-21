@@ -98,7 +98,7 @@ xzcat ~/images/your-image.img.xz | sudo dd of=/dev/sdX bs=4M status=progress
 sync
 ```
 
-After flashing, copy your `config.toml` to `/etc/pwnagotchi/` on the boot partition before first boot.
+After flashing, use [PwnConfig](https://pwnstore.org/pwnconfig.html) to generate your `config.toml`, then copy it to `/etc/pwnagotchi/` on the boot partition before first boot.
 
 ---
 
