@@ -1,4 +1,5 @@
-IMG_NAME="pwnagotchi-64bit"
+VERSION=$(grep -oP "(?<=')[0-9.]+(?=')" ~/Pwny-rework/pwnagotchi/pwnagotchi/_version.py)
+IMG_NAME="pwnagotchi-64bit-${VERSION}"
 WORK_DIR="/home/wpa2/work-64bit"
 DEPLOY_DIR="/home/wpa2/images"
 DEPLOY_COMPRESSION="xz"
