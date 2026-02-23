@@ -25,15 +25,3 @@ IMAGE_DIR ?= $(BUILD_HOME)/images
 	sudo ./pi-gen-64bit/build.sh -c config-64bit
 	mkdir -p $(IMAGE_DIR)
 	sudo chown $(BUILD_USER):$(BUILD_USER) -R $(IMAGE_DIR)
-
-update_langs:
-	@for lang in stage3/05-install-pwnagotchi/files/pwnagotchi/pwnagotchi/locale/*/; do\
-		echo "updating language: $$lang ..."; \
-		./scripts/language.sh update $$(basename $$lang); \
-	done
-
-compile_langs:
-	@for lang in stage3/05-install-pwnagotchi/files/pwnagotchi/pwnagotchi/locale/*/; do\
-		echo "compiling language: $$lang ..."; \
-		./scripts/language.sh compile $$(basename $$lang); \
-	done

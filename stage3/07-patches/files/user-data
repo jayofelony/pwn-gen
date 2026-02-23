@@ -4,13 +4,16 @@
 hostname: pwnagotchi
 manage_etc_hosts: true
 
+keyboard:
+    layout: us
+
 # Create a default user account and apply permissions
 users:
   - name: pi
     groups: users,adm,dialout,audio,netdev,video,plugdev,cdrom,games,input,gpio,spi,i2c,render,sudo
     shell: /bin/bash
-    lock_passwd: false  # Set to true to disable password login entirely
-    plain_text_password: raspberry  # Alternatively, use 'passwd:' with a hashed password for better security
+    lock_passwd: false
+    plain_text_passwd: raspberry
     sudo: ALL=(ALL) NOPASSWD:ALL  # Allow passwordless sudo for this user
 
 # Raspberry Pi–specific options (provided by the cc_raspberry_pi module)
@@ -24,3 +27,4 @@ rpi:
 
 # Additional Raspberry Pi OS option (not available on generic cloud-init images)
 enable_ssh: true  # Enables the SSH server on first boot
+ssh_pwauth: true  # Allow password authentication for SSH (not recommended for production environments)
