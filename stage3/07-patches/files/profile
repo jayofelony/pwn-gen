@@ -2,7 +2,7 @@
 # and Bourne compatible shells (bash(1), ksh(1), ash(1), ...).
 
 if [ "$(id -u)" -eq 0 ]; then
-  PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+  PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/.pwn/bin/"
 else
   PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games"
 fi
@@ -33,7 +33,7 @@ if [ -d /etc/profile.d ]; then
   unset i
 fi
 
-alias custom='cd /usr/local/share/pwnagotchi/custom-plugins/'
+alias custom='cd /etc/pwnagotchi/custom-plugins/'
 alias config='sudo nano /etc/pwnagotchi/config.toml'
 alias pwnlog='tail -f -n300 /etc/pwnagotchi/log/pwnagotchi.log | sed --unbuffered "s/,[[:digit:]]\\{3\\}\\]//g" | cut -d " " -f 2-'
 alias pwnkill='sudo systemctl restart pwnagotchi'
