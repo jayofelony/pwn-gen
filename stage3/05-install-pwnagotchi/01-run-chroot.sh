@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-cd /home/pi
+cd /opt
 echo -e "\e[32m### Manually installing lgpio from source ###\e[0m"
 wget http://abyz.me.uk/lg/lg.zip
 unzip lg.zip
@@ -15,7 +15,7 @@ if [ ! -d pwnagotchi ]; then
     git clone https://github.com/jayofelony/pwnagotchi.git
     cd pwnagotchi/
 else
-    cd /home/pi/pwnagotchi/
+    cd /opt/pwnagotchi/
     git pull
 fi
 if [ -d /opt/.pwn ]; then
