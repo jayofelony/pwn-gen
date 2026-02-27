@@ -38,7 +38,5 @@ pip3 cache purge
 pip3 install . --no-cache-dir
 deactivate
 
-cd /home/pi
-
 ln -sf /opt/.pwn/bin/pwnagotchi /usr/bin/pwnagotchi
 rm -r /opt/pwnagotchi
