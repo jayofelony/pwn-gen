@@ -31,8 +31,6 @@ rpi:
     interfaces:
         spi: true               # Enable SPI interface
         i2c: true               # Enable I2C interface
-        serial: true            # Enable serial console and UART interface
-        onewire: true           # Enable 1-Wire interface
 
 # Additional Raspberry Pi OS option (not available on generic cloud-init images)
 enable_ssh: true  # Enables the SSH server on first boot
