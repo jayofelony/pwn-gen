@@ -1,6 +1,6 @@
 #!/bin/sh
 _hostname=$(hostname)
-_version=$(cut -d"'" -f2 < /home/pi/.pwn/lib/python3.13/site-packages/pwnagotchi/_version.py)
+_version=$(cut -d"'" -f2 < /opt/.pwn/lib/python3.13/site-packages/pwnagotchi/_version.py)
 echo
 echo "(◕‿‿◕) $_hostname"
 echo
