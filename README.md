@@ -1,3 +1,5 @@
+**This repo was merged into the main [Pwnagotchi](https://www.github.com/jayofelony/pwnagotchi) repository.**
+
 # pwn-gen
 
 Image builder for [Pwnagotchi](https://pwnagotchi.org/) based on [pi-gen](https://github.com/RPi-Distro/pi-gen).
